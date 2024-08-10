@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class BasicOperations {
+
+    public static void main(String[] args) {
+        // Create a Scanner object to read input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter two integers
+        System.out.print("Enter the first integer (x): ");
+        int x = scanner.nextInt();
+
+        System.out.print("Enter the second integer (y): ");
+        int y = scanner.nextInt();
+
+        // Perform basic operations
+        int addition = x + y;
+        int subtraction = x - y;
+        int multiplication = x * y;
+        int division = 0;
+        int modulus = 0;
+
+        // Check for division by zero
+        if (y != 0) {
+            division = x / y;
+            modulus = x % y;
+        } else {
+            System.out.println("Division or modulus by zero is not allowed.");
+        }
+
+        // Display the results of the operations
+        System.out.println("Results:");
+        System.out.println(x + " + " + y + " = " + addition);
+        System.out.println(x + " - " + y + " = " + subtraction);
+        System.out.println(x + " * " + y + " = " + multiplication);
+
+        if (y != 0) {
+            System.out.println(x + " / " + y + " = " + division);
+            System.out.println(x + " % " + y + " = " + modulus);
+        }
+    }
+}
