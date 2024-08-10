@@ -1,0 +1,41 @@
+class SampleClass {
+
+    // Instance variables
+    int a;
+    int b;
+
+    // Default constructor
+    public SampleClass() {
+        this.a = 0;
+        this.b = 0;
+        System.out.println("Default Constructor called. Values: a = " + a + ", b = " + b);
+    }
+
+    // Parameterized constructor
+    public SampleClass(int a, int b) {
+        this.a = a;
+        this.b = b;
+        System.out.println("Parameterized Constructor called. Values: a = " + a + ", b = " + b);
+    }
+
+    // Overloaded constructor with one parameter
+    public SampleClass(int a) {
+        this.a = a;
+        this.b = 0;  // Default value
+        System.out.println("Overloaded Constructor with one parameter called. Values: a = " + a + ", b = " + b);
+    }
+}
+
+public class Constructor {
+
+    public static void main(String[] args) {
+        // Create an object using the default constructor
+        SampleClass obj1 = new SampleClass();
+
+        // Create an object using the parameterized constructor
+        SampleClass obj2 = new SampleClass(10, 20);
+
+        // Create an object using the overloaded constructor with one parameter
+        SampleClass obj3 = new SampleClass(30);
+    }
+}
